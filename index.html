@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geometry Genius</title>
+    <!-- tailwind and daisy ui cnd link -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.3/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body>
+    <header>
+
+    </header>
+    <main>
+        <div class="flex flex-col md:flex-row">
+            <div class="flex-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <!-- triangle -->
+                <div class="card bg-base-100 shadow-xl">
+                    <figure><img src="images/triangle.png" alt="triangle" /></figure>
+                    <div class="card-body text-center">
+                      <h2 class="text-center text-2xl font-bold text-[#414141]">Triangle</h2>
+                      <p>Area (A) = 0.5 X b X h</p>
+                      <div class="flex"> 
+                        <input class="w-24 py-1 px-3 bg-[#F1F1F1] rounded" type="text" id="inputTriangleBase" placeholder="b">
+                        <span class="mx-2 text-xl">cm</span>
+                        <input class="w-24 py-1 px-3 bg-[#F1F1F1] rounded" type="text" id="inputTriangleHeight" placeholder="h">
+                        <span class="ml-2 text-xl">cm</span>
+                      </div>
+                      <div>
+                        <p class="text-xl">Area : <span id="triangleArea"></span>0<span>cm<sup>2</sup></span></p>
+                      </div>
+                      <div class="card-actions">
+                        <button onclick="triangleBtn()" class="btn text-white text-xl font-bold bg-sky-500 w-full mt-2">Calculate</button>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Rectangle card -->
+                  <div class="card bg-base-100 shadow-xl">
+                    <figure><img src="images/rectangle.png" alt="Rectangle" /></figure>
+                    <div class="card-body text-center">
+                      <h2 class="text-center text-2xl font-bold text-[#414141]">Rectangle</h2>
+                      <p>Area (A) = w X I</p>
+                      <div class="flex"> 
+                        <input class="w-24 py-1 px-3 bg-[#F1F1F1] rounded" type="text" id="inputRectangleWidth" placeholder="w">
+                        <span class="mx-2 text-xl">cm</span>
+                        <input class="w-24 py-1 px-3 bg-[#F1F1F1] rounded" type="text" id="inputRectangleLength" placeholder="l">
+                        <span class="ml-2 text-xl">cm</span>
+                      </div>
+                      <div>
+                        <p class="text-xl">Area : <span id="rectangleArea"></span>0<span>cm<sup>2</sup></span></p>
+                      </div>
+                      <div class="card-actions">
+                        <button onclick="rectangleBtn()" class="btn text-white text-xl font-bold bg-sky-500 w-full mt-2">Calculate</button>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Parallelogram card -->
+                  <div class="card bg-base-100 shadow-xl">
+                    <figure><img src="images/parallelogram.png" alt="Parallelogram" /></figure>
+                    <div class="card-body text-center">
+                      <h2 class="text-center text-2xl font-bold text-[#414141]">Parallelogram</h2>
+                      <p>Area (A) = w X I</p>
+                      <div class="flex"> 
+                        <input class="w-24 py-1 px-3 bg-[#F1F1F1] rounded" type="text" id="inputParallelogramBase" placeholder="w">
+                        <span class="mx-2 text-xl">cm</span>
+                        <input class="w-24 py-1 px-3 bg-[#F1F1F1] rounded" type="text" id="inputParallelogramHeight" placeholder="l">
+                        <span class="ml-2 text-xl">cm</span>
+                      </div>
+                      <div>
+                        <p class="text-xl">Area : <span id="parallelogramArea"></span>0<span>cm<sup>2</sup></span></p>
+                      </div>
+                      <div class="card-actions">
+                        <button onclick="parallelogramBtn()" class="btn text-white text-xl font-bold bg-sky-500 w-full mt-2">Calculate</button>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- card -->
+                <div class="card w-96 bg-base-100 shadow-xl">
+                    <figure><img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
+                    <div class="card-body">
+                      <h2 class="card-title">Shoes!</h2>
+                      <p>If a dog chews shoes whose shoes does he choose?</p>
+                      <div class="card-actions justify-end">
+                        <button class="btn btn-primary">Buy Now</button>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+            <div class="w-96 border-2 border-gray-700">
+                <h3 class="text-3xl text-center p-4">Area calculation</h3>
+            </div>
+
+        </div>
+
+    </main>
+
+    <script src="js/triangle.js"></script>
+    <script src="js/rectangle.js"></script>
+</body>
+
+</html>
