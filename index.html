@@ -16,7 +16,8 @@
 
     </header>
     <main>
-        <div class="flex flex-col md:flex-row">
+        <div class="w-4/5 mx-auto my-5">
+          <h1 class="text-4xl text-center pb-8 underline">Geometry Genius</h1>
             <div class="flex-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 <!-- triangle -->
                 <div class="card bg-base-100 shadow-xl">
@@ -78,28 +79,72 @@
                       </div>
                     </div>
                   </div>
-                  <!-- card -->
-                <div class="card w-96 bg-base-100 shadow-xl">
-                    <figure><img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
-                    <div class="card-body">
-                      <h2 class="card-title">Shoes!</h2>
-                      <p>If a dog chews shoes whose shoes does he choose?</p>
-                      <div class="card-actions justify-end">
-                        <button class="btn btn-primary">Buy Now</button>
-                      </div>
+              
+                 <!-- Rhombus card -->
+                 <div class="card bg-base-100 shadow-xl">
+                  <figure><img src="images/rhombus.png" alt="rhombus" /></figure>
+                  <div class="card-body text-center">
+                    <h2 class="text-center text-2xl font-bold text-[#414141]">Rhombus</h2>
+                    <p>Area (A) = .5 X d<sub>1</sub> X d<sub>2</sub></p>
+                    <div class="flex"> 
+                      <input class="w-24 py-1 px-3 bg-[#F1F1F1] rounded" type="text" id="inputRhombusD1" placeholder="d1">
+                      <span class="mx-2 text-xl">cm</span>
+                      <input class="w-24 py-1 px-3 bg-[#F1F1F1] rounded" type="text" id="inputRhombusD2" placeholder="d2">
+                      <span class="ml-2 text-xl">cm</span>
+                    </div>
+                    <div>
+                      <p class="text-xl">Area : <span id="rhombusArea">0</span><span>cm<sup>2</sup></span></p>
+                    </div>
+                    <div class="card-actions">
+                      <button onclick="rhombusBtn()" class="btn text-white text-xl font-bold bg-sky-500 w-full mt-2">Calculate</button>
                     </div>
                   </div>
+                </div>
+                 <!-- Pentagon card -->
+                 <div class="card bg-base-100 shadow-xl">
+                  <figure><img src="images/pentagon.png" alt="Pentagon" /></figure>
+                  <div class="card-body text-center">
+                    <h2 class="text-center text-2xl font-bold text-[#414141]">Pentagon</h2>
+                    <p>Area (A) = .5 X p X b</p>
+                    <div class="flex"> 
+                      <input class="w-24 py-1 px-3 bg-[#F1F1F1] rounded" type="text" id="inputPentagonP" placeholder="p">
+                      <span class="mx-2 text-xl">cm</span>
+                      <input class="w-24 py-1 px-3 bg-[#F1F1F1] rounded" type="text" id="inputPentagonB" placeholder="b">
+                      <span class="ml-2 text-xl">cm</span>
+                    </div>
+                    <div>
+                      <p class="text-xl">Area : <span id="PentagonArea">0</span><span>cm<sup>2</sup></span></p>
+                    </div>
+                    <div class="card-actions">
+                      <button onclick="pentagonBtn()" class="btn text-white text-xl font-bold bg-sky-500 w-full mt-2">Calculate</button>
+                    </div>
+                  </div>
+                </div>
+                 <!-- Ellipse card -->
+                 <div class="card bg-base-100 shadow-xl">
+                  <figure><img src="images/ellipse.png" alt="Ellipse" /></figure>
+                  <div class="card-body text-center">
+                    <h2 class="text-center text-2xl font-bold text-[#414141]">Ellipse</h2>
+                    <p>Area (A) = &pi;ab</p>
+                    <div class="flex"> 
+                      <input class="w-24 py-1 px-3 bg-[#F1F1F1] rounded" type="text" id="inputEllipseA" placeholder="a">
+                      <span class="mx-2 text-xl">cm</span>
+                      <input class="w-24 py-1 px-3 bg-[#F1F1F1] rounded" type="text" id="inputEllipseB" placeholder="b">
+                      <span class="ml-2 text-xl">cm</span>
+                    </div>
+                    <div>
+                      <p class="text-xl">Area : <span id="EllipseArea">0</span><span>cm<sup>2</sup></span></p>
+                    </div>
+                    <div class="card-actions">
+                      <button onclick="ellipseBtn()" class="btn text-white text-xl font-bold bg-sky-500 w-full mt-2">Calculate</button>
+                    </div>
+                  </div>
+                </div>
             </div>
-            <div class="w-96 border-2 border-gray-700">
-                <h3 class="text-3xl text-center p-4">Area calculation</h3>
-            </div>
-
         </div>
 
     </main>
-
-    
-  
+<!-- js file setup -->
     <script src="js/main.js"></script>
 </body>
 

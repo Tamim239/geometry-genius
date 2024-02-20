@@ -35,3 +35,27 @@ function parallelogramBtn(){
     const inputArea = inputBase * inputHeight;
     setInnerTextById("parallelogramArea",inputArea);
 }
+
+// rhombusBtn
+function rhombusBtn(){
+    const inputD1 = getInputById("inputRhombusD1");
+    const inputD2 = getInputById("inputRhombusD2");
+    const inputArea = 0.5 * inputD1 * inputD2;
+    setInnerTextById("rhombusArea", inputArea);
+}
+
+//Pentagon
+function pentagonBtn(){
+    const inputP = getInputById("inputPentagonP");
+    const inputB = getInputById("inputPentagonB");
+    const inputArea = 0.5 * inputP * inputB;
+    setInnerTextById("PentagonArea", inputArea);
+}
+
+// Ellipse
+function ellipseBtn(){
+    const inputA = getInputById("inputEllipseA");
+    const inputB = getInputById("inputEllipseB");
+    const inputArea =(Math.PI * (inputA * inputB)) ;
+    setInnerTextById("EllipseArea", inputArea);
+}
